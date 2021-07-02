@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="main-documentation.css">
+     <title>
+         CSS Documentation
+      
+      </title>
+
+
+
+<body>
+  <nav id="navbar">
+  <header>Python Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#Syntax">Syntax</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#comment">Comment</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    <li>
+      <a class="nav-link" href="#Variable_Names">Variable Names</a>
+    </li>
+    <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+    <li><a class="nav-link" href="#Constants">Constants</a></li>
+    <li><a class="nav-link" href="#Data_types">Data types</a></li>
+    <li>
+      <a class="nav-link" href="#if...else_statement">if...else statement</a>
+    </li>
+    <li><a class="nav-link" href="#while_statement">while statement</a></li>
+    <li>
+      <a class="nav-link" href="#Function_declarations">Function</a>
+    </li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+    <h3> What is Python?</h3>
+      <p>
+        Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+       It is used for:
+       <ul>
+       <li>web development (server-side),
+       <li>software development,
+       <li>mathematics,
+       <li>system scripting.
+       </ul>
+      </p>
+  
+  <h3> Why Python?</h3>
+        <ul>
+        <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).
+        <li>Python has a simple syntax similar to the English language.
+        <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.
+        <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
+        <li>Python can be treated in a procedural way, an object-oriented way or a functional way.
+       </ul>
+
+    <h3> Good to know</h3>
+        <ul>
+        <li>The most recent major version of Python is Python 3, which we shall be using in this tutorial. However, Python 2, although not being updated with anything other than security updates, is still quite popular.
+        <li>In this tutorial Python will be written in a text editor. It is possible to write Python in an Integrated Development Environment, such as Thonny, Pycharm, Netbeans or Eclipse which are particularly useful when managing larger collections of Python files.
+       </ul>
+
+    <h3> Why Python?</h3>
+        <ul>
+        <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).
+        <li>Python has a simple syntax similar to the English language.
+        <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.
+        <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
+        <li>Python can be treated in a procedural way, an object-oriented way or a functional way.
+       </ul>
+
+    </article>
+  </section>
+
+  <section class="main-section" id="Syntax">
+    <header>Syntax</header>
+    <article>
+         <p>
+         Python was originally developed as a teaching language, but its ease of use and clean syntax have led it to be embraced by beginners and experts alike. The cleanliness of Python's syntax has led some to call it "executable pseudocode",
+          and indeed my own experience has been that it is often much easier to read and understand a Python script than to read a similar script written in, say, C. Here we'll begin to discuss the main features of Python's syntax.
+        Syntax refers to the structure of the language (i.e., what constitutes a correctly-formed program). For the time being, we'll not focus on the semantics – the meaning of the words and symbols within the syntax – but will return to this at a later point.
+       </p>
+    </article>
+  </section>
+  <section class="main-section" id="comment">
+    <header>Comment</header>
+    <article>
+      <p>
+      Comments can be used to explain Python code. They can be used to make the code more readable. They can also be used to prevent execution when testing code.
+      </p>
+      <h3> Creating a Comment </h3>
+      <p> Single Line Comments : they start with # example 
+      <code>#This is a comment 
+       print("Hello, World!") 
+      </code> while </p>
+      <p> Multi Line Comments : Python does not really have a syntax for multi line comments. To add a multiline comment you could insert a # for each line: Or, not quite as intended, you can use a multiline string.
+          Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it:
+         <code>""" 
+         This is a comment 
+         written in
+         more than just one line
+         """ 
+         print("Hello, World!")</code></p>
+    </article>
+  </section>
+
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article>
+      In this program, we have used the built-in print() function to print the string Hello, world! on our screen. By the way, a string is a sequence of characters. In Python, strings are enclosed inside single quotes, double quotes, or triple quotes.
+      <code># This program prints Hello, world! 
+            print('Hello, world!')
+      </code>
+    </article>
+  </section>
+
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+        Variables are containers for storing data values.
+
+        <h3>Creating Variables</h3>
+        <p>Python has no command for declaring a variable.A variable is created the moment you first assign a value to it. Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+        <h5>Example</h5>
+        <code>x = 5
+              y = "John"
+              print(x) 
+              print(y)</code>
+
+        <h3>Casting</h3>
+        <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+        <h5>Example</h5>
+        <code>x = str(3)    # x will be '3'
+              y = int(3)    # y will be 3 
+              z = float(3)  # z will be 3.0</code>
+
+
+
+  </section>
+  <section class="main-section" id="Variable_Names">
+    <header>variables Names</header>
+    <article>
+      You can name a variable in various ways:<br>
+      Variable Names
+      <ul>
+      <li>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:
+      <li>A variable name must start with a letter or the underscore character
+      <li>A variable name cannot start with a number
+      <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+      <li>Variable names are case-sensitive (age, Age and AGE are three different variables)
+      </ul>
+      <h5>Example</h5>
+       <i>Legal variable names:</i>
+       <code> myvar = "John"
+              my_var = "John"
+             _my_var = "John"
+              myVar = "John"
+              MYVAR = "John"
+              myvar2 = "John"
+        </code>
+        <i>Illegal variable names:</i>
+       <code> 2myvar = "John"
+              my-var = "John"
+              my var = "John"
+        </code>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Global_variables">
+    <header>Global variables</header>
+    <article>
+      <p>
+        Variables that are created outside of a function (as in all of the examples above) are known as global variables.Global variables can be used by everyone, both inside of functions and outside.
+        If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+      </p>
+
+      <code> x = "awesome" 
+             def myfunc():
+             x = "fantastic"
+             print("Python is " + x)
+             myfunc()
+             print("Python is " + x)
+      </code>
+    </article>
+  </section>
+  <section class="main-section" id="Constants">
+    <header>Constants</header>
+    <article>
+      <p>
+         A constant is a type of variable whose value cannot be changed. It is helpful to think of constants as containers that hold information which cannot be changed later.
+         You can think of constants as a bag to store some books which cannot be replaced once placed inside the bag.
+         In Python, constants are usually declared and assigned in a module. Here, the module is a new file containing variables, functions, etc which is imported to the main file. Inside the module, constants are written in all capital letters and underscores separating the words.
+      </p>
+
+      <code>PI = 3.14;
+            g = 9.8;
+      </code>
+      <code>import constant
+
+            print(constant.PI)
+            print(constant.g)
+      </code>
+      <p>
+        In the above program, we create a constant.py module file. Then, we assign the constant value to PI and g. After that, we create a main.py file and import the constant module. Finally, we print the constant value.
+      </p>
+
+      
+    </article>
+  </section>
+  <section class="main-section" id="Data_types">
+    <header>Data types</header>
+    <article>
+      <p>In programming, data type is an important concept.Variables can store data of different types, and different types can do different things.
+        <br>Python has the following data types built-in by default, in these categories:</p>
+         <ul><li>Numeric Types:	int, float, complex
+             <li>Sequence Types:	list, tuple, range
+             <li>Mapping Type:	dict
+              <li>Set Types:	set, frozenset
+              <li>Boolean Type:	bool
+               <li>Binary Types:	bytes, bytearray, memoryview/p>
+        </ul>
+    </article>
+  </section>
+
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <p>Python supports the usual logical conditions from mathematics:
+    <ul>
+     <li>Equals: a == b
+      <li>Not Equals: a != b
+      <li>Less than: a < b
+      <li>Less than or equal to: a <= b
+         <li>Greater than: a > b
+         <li>Greater than or equal to: a >= b
+         </ul>
+        These conditions can be used in several ways, most commonly in "if statements" and loops.
+        An "if statement" is written by using the if keyword, "eles if statement" is written by using the elif keyword and the "else statement" by using else keyword
+        <code>a = 200 
+              b = 33
+              if b > a:
+                 print("b is greater than a")
+              elif a == b:
+                 print("a and b are equal")
+              else:
+                 print("a is greater than b")</code>
+        
+        </p>
+    </article>
+  </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+    <h3>What is while loop in Python?</h3>
+    <p> The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true.We generally use this loop when we don't know the number of times to iterate beforehand.
+    <code>i = 1
+          while i < 6:
+          print(i)
+          i += 1</code>
+        In the while loop, test expression is checked first. The body of the loop is entered only if the test_expression evaluates to True. After one iteration, the test expression is checked again. This process continues until the test_expression evaluates to False. In Python, the body of the while loop is determined through indentation.
+        The body starts with indentation and the first unindented line marks the end. Python interprets any non-zero value as True. None and 0 are interpreted as False.
+      </p>
+
+    </article>
+  </section>
+  <section class="main-section" id="Function_declarations">
+    <header>Function</header>
+    <article>
+    <p>
+     In Python, a function is a group of related statements that performs a specific task. Functions help break our program into smaller and modular chunks. As our program grows larger and larger, functions make it more organized and manageable. Furthermore, it avoids repetition and makes the code reusable.
+    <h4>Syntax of Function</h4>
+   <code>def function_name(parameters):
+	         """docstring"""
+	         statement(s)</code>
+      Above shown is a function definition that consists of the following components.
+      <ul>
+      <li>Keyword def that marks the start of the function header.
+      <li>A function name to uniquely identify the function. Function naming follows the same rules of writing identifiers in Python.
+      <li>Parameters (arguments) through which we pass values to a function. They are optional.
+      <li>A colon (:) to mark the end of the function header.
+      <li>Optional documentation string (docstring) to describe what the function does.
+      <li>One or more valid python statements that make up the function body. Statements must have the same indentation level (usually 4 spaces).
+      <li>An optional return statement to return a value from the function.
+      </ul>
+      <code>def greet(name):
+            """
+            This function greets to
+            the person passed in as
+            a parameter
+            """
+            print("Hello, " + name + ". Good morning!")
+            greet('Paul')</code>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a href="https://www.programiz.com/python-programming" target="_blank" >programiz</a> and
+          <a href="https://www.w3schools.com/python" target="_blank" >w3school.</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+</body>
+</html>
